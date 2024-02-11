@@ -1,0 +1,156 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewreport" content="width=device-width,initial-scale=1">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<style>
+.box{
+	
+    background-color:#C1FBB9;
+    color: blue;
+    top: 50%;
+    left: 35%;
+	position:absolute;
+    transform: translate(-0%,-50%);
+    box-sizing: border-box;
+    padding: 50px 100px;
+	
+}
+
+body{
+background-image:url("paddyimage.png");
+background-size:cover;
+
+}
+
+a{
+color:blue;
+list-style-type:none;
+}
+a:hover{
+color:green;
+}
+
+img{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top:-65px;
+    left:135px;
+	
+}
+
+</style>
+</head>
+<body>
+
+<script>
+
+function validate()
+{
+	var email=document.getElementById('Email').value;
+	var password=document.getElementById('pwd').value;
+
+		if(email==null || email=="")
+			{
+				alert("enter the email-id");
+				return false;
+			}
+			
+		else if(password==null || password=="")
+			{
+				alert("enter the password");
+				return false;
+			}
+		else if(password.length<6)
+			{
+				alert("password length should be 6");
+				return false;
+			}
+		else  if (email!= null && password!= "" )
+			 {
+				alert("Login successfully");
+				return false;
+             }
+
+        }
+
+$(document).ready(function(){
+$('[data-toggle="tooltip"]').tooltip();
+});
+
+</script>
+
+
+ 
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+			<div class="navbar-header">
+			  <a class="navbar-brand" href="#" style="color:green">FARMER CORNER</a>
+			</div>
+		<ul class="nav navbar-nav">
+		  <li><a href="project.html">Home</a></li>
+		  <li><a href="productproject.html">Product</a></li>
+		  <li><a href="aboutproject.html">About</a></li>
+		  <li   class="active"><a href="#">Feedback</a></li>
+		</ul>
+		
+		<ul class="nav navbar-nav navbar-right nav-pills">
+				  <li><a class="active" href="signupproject.html"data-toggle="tooltip" data-placement="left" title="sign up">
+				  <span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+				  <li><a href="loginproject.html" data-toggle="tooltip" data-placement="left" title="login">
+				  <span class="glyphicon glyphicon-log-in"></span> Login</a></li> 
+				 
+		</ul>
+		
+	  </div>
+	</nav>
+
+		<div class="box">
+			<form class="form-horizontal" action="">
+    <img src="img/11zon_cropped.png">
+<br>
+				<div class="form-group" >
+					<label>username</label>
+					<input type="text" name="user" id="name" class="form-control">
+				</div>
+
+
+				<div class="form-group">
+					<label>Password:</label>
+					<input type="password" name="password" id="pwd" class="form-control">
+				</div>
+
+
+
+				<div class="form-group">
+					<label>feedback:</label>
+					<input type="text" name="feedback" id="fb" class="form-control">
+				</div>
+
+
+				<center><input class="btn btn-success" type="submit" value="summit" onclick="validate()" 
+				data-toggle="tooltip" data-placement="right" title="summit">
+				</center>
+				
+				
+				
+			</div>
+		</div>
+
+			</form>
+			
+			</body>
+			</html>
+
+
+
